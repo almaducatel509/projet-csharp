@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{FAFDB368-FDDB-4B8E-BACD-7D92F2121F86}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HopitalEspoirDelmas</RootNamespace>
+    <AssemblyName>HopitalEspoirDelmas</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkProfile />
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\Wildar\AppData\Roaming\ICSharpCode\SharpDevelop5\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>bin\Debug\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>bin\Debug\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="baseHopital\DbHopitalEs.cs" />
+    <Compile Include="ChambreTr\ChambreTraitement.cs" />
+    <Compile Include="ChambreTr\NewChambre.cs" />
+    <Compile Include="ChambreTr\NewChambre.Designer.cs">
+      <DependentUpon>ViewChambre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChambreTr\ViewChambre.cs" />
+    <Compile Include="consultationTr\ConsultationTraitement.cs" />
+    <Compile Include="consultationTr\NewConsultation.cs" />
+    <Compile Include="consultationTr\NewConsultation.Designer.cs">
+      <DependentUpon>NewConsultation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consultationTr\ShowConsultation.cs" />
+    <Compile Include="consultationTr\ShowConsultation.Designer.cs">
+      <DependentUpon>ShowConsultation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consultationTr\ViewConsultation.cs" />
+    <Compile Include="container\Accueil.cs" />
+    <Compile Include="container\Accueil.Designer.cs">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="container\chambre.cs" />
+    <Compile Include="container\chambre.Designer.cs">
+      <DependentUpon>chambre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="container\consultation.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="container\consultation.Designer.cs">
+      <DependentUpon>consultation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="container\contrats.cs" />
+    <Compile Include="container\contrats.Designer.cs">
+      <DependentUpon>contrats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="container\dossiers.cs" />
+    <Compile Include="container\dossiers.Designer.cs">
+      <DependentUpon>dossiers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="container\menuPrincipal.cs" />
+    <Compile Include="container\menuPrincipal.Designer.cs">
+      <DependentUpon>menuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="container\personels.cs" />
+    <Compile Include="container\personels.Designer.cs">
+      <DependentUpon>personels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="container\services.cs" />
+    <Compile Include="container\services.Designer.cs" />
+    <Compile Include="container\ShowDossiers.cs" />
+    <Compile Include="container\ShowDossiers.Designer.cs">
+      <DependentUpon>ShowDossiers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="container\utilisateurs.cs" />
+    <Compile Include="container\utilisateurs.Designer.cs" />
+    <Compile Include="contratTr\ContratTraitement.cs" />
+    <Compile Include="contratTr\NewContrat.cs" />
+    <Compile Include="contratTr\NewContrat.Designer.cs">
+      <DependentUpon>NewContrat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="contratTr\ViewContrat.cs" />
+    <Compile Include="dossierTr\DossiersTraitement.cs" />
+    <Compile Include="dossierTr\NewDossier.cs" />
+    <Compile Include="dossierTr\NewDossier.Designer.cs">
+      <DependentUpon>NewDossier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dossierTr\ViewDossiers.cs" />
+    <Compile Include="ICCommutation.cs" />
+    <Compile Include="persoTr\NewPersonel.cs" />
+    <Compile Include="persoTr\NewPersonel.Designer.cs">
+      <DependentUpon>NewPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="persoTr\PersonelsTraitement.cs" />
+    <Compile Include="persoTr\ViewPersonels.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\MainForm.cs" />
+    <Compile Include="Properties\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceType\NewService.cs" />
+    <Compile Include="ServiceType\NewService.Designer.cs" />
+    <Compile Include="ServiceType\ShowService.cs" />
+    <Compile Include="ServiceType\ShowService.Designer.cs">
+      <DependentUpon>ShowService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceType\ViewService.cs" />
+    <Compile Include="ThemeColor.cs" />
+    <Compile Include="Traitement\TraitementSer.cs" />
+    <Compile Include="utilisateursTr\NewUtilisateurs.cs" />
+    <Compile Include="utilisateursTr\NewUtilisateurs.Designer.cs">
+      <DependentUpon>NewUtilisateurs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="utilisateursTr\UtilisateursTraitement.cs" />
+    <Compile Include="utilisateursTr\ViewUtilisateurs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="container" />
+    <Folder Include="baseHopital" />
+    <Folder Include="ChambreTr" />
+    <Folder Include="contratTr" />
+    <Folder Include="consultationTr" />
+    <Folder Include="dossierTr" />
+    <Folder Include="utilisateursTr" />
+    <Folder Include="persoTr" />
+    <Folder Include="Traitement" />
+    <Folder Include="ServiceType" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChambreTr\NewChambre.resx">
+      <DependentUpon>NewChambre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultationTr\NewConsultation.resx">
+      <DependentUpon>NewConsultation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultationTr\ShowConsultation.resx">
+      <DependentUpon>ShowConsultation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="container\Accueil.resx">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="container\chambre.resx">
+      <DependentUpon>chambre.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="container\consultation.resx">
+      <DependentUpon>consultation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="container\contrats.resx">
+      <DependentUpon>contrats.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="container\dossiers.resx">
+      <DependentUpon>dossiers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="container\menuPrincipal.resx">
+      <DependentUpon>menuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="container\personels.resx">
+      <DependentUpon>personels.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="container\services.resx">
+      <DependentUpon>services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="container\ShowDossiers.resx">
+      <DependentUpon>ShowDossiers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="container\utilisateurs.resx">
+      <DependentUpon>utilisateurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="contratTr\NewContrat.resx">
+      <DependentUpon>NewContrat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dossierTr\NewDossier.resx">
+      <DependentUpon>NewDossier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="persoTr\NewPersonel.resx">
+      <DependentUpon>NewPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceType\NewService.resx">
+      <DependentUpon>NewService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceType\ShowService.resx">
+      <DependentUpon>ShowService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="utilisateursTr\NewUtilisateurs.resx">
+      <DependentUpon>NewUtilisateurs.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

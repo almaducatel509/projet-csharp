@@ -1,0 +1,11 @@
+Projet C# du groupe WAR
+Ce groupe est composé de:
+1) Wildarline OSEMÉ
+2) Alma DUCATEL
+3) Rose-Kenflore LORRIN
+
+Le nom de notre base de donnée est : hopitalespoir
+Le nom de l'administrateur est : Admin avec le mot de passe: 3579
+Le nom de l'utilisateur inactif est Love avec le mot de passe : 2468
+
+Désolé professeur pour le retard.
